@@ -247,6 +247,8 @@
   .wide{position:relative; width:min(820px,92vw); aspect-ratio:16/9; margin:52px auto 0;
     border:1px solid var(--line); overflow:hidden; box-shadow:0 30px 80px rgba(0,0,0,.5)}
   .wide iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+  .reddit-embed{width:min(540px,92vw); margin:52px auto 0; text-align:left}
+  .reddit-embed .reddit-embed-bq{margin:0}
 
   /* ============ FOOTER ============ */
   footer{border-top:1px solid var(--line); padding:34px 0; color:var(--mist)}
@@ -649,6 +651,12 @@
         loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
+    </div>
+    <div class="reddit-embed">
+      <blockquote class="reddit-embed-bq" style="height:740px" data-embed-height="740" data-embed-theme="dark">
+        <a href="https://www.reddit.com/r/PortalExperiencer/comments/1vtk1ob/fuyang_anhui_province_china_14_august_2026/">Fuyang, Anhui province, China, 14 August 2026</a>
+      </blockquote>
+      <script async src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
     </div>
   </div>
 </section>
