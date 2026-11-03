@@ -189,9 +189,16 @@
   .member .nm{font-family:var(--serif); font-size:1.85rem; font-weight:500; margin:18px 0 4px}
   .member .role{font-family:var(--mono); font-size:.64rem; letter-spacing:.18em; text-transform:uppercase; color:var(--signal); margin-bottom:18px}
   .member .bio{color:var(--mist); font-size:.96rem; line-height:1.6}
-  .cast{grid-auto-flow:dense}
-  @media(min-width:561px) and (max-width:860px){.member:has(+ .member.wide){grid-column:1/-1}}
-  @media(min-width:861px){.member.wide{grid-column:span 2 !important}}
+  @media(min-width:561px){.member.lead{grid-column:span 2}}
+  @media(max-width:860px){.member.lead{grid-column:1/-1}}
+  @media(min-width:561px) and (max-width:860px){.member:has(+ .member.lead){grid-column:1/-1}}
+  .member.lead{background:linear-gradient(135deg, rgba(236,186,98,.07), transparent 60%), var(--void); box-shadow:inset 0 2px 0 var(--signal)}
+  .member.lead .idx{color:var(--signal)}
+  .member.lead .nm{font-size:2.3rem}
+  .member .bio.files{margin-top:16px; font-family:var(--mono); font-size:.64rem; letter-spacing:.1em; text-transform:uppercase; line-height:2}
+  .member .bio.files a{color:var(--snow); border-bottom:1px solid var(--ember)}
+  .ep .file{display:block; margin-top:9px; font-family:var(--mono); font-size:.64rem; letter-spacing:.08em; line-height:1.7; color:var(--mist); opacity:.85}
+  .ep .file b{color:var(--signal); font-weight:500; letter-spacing:.16em}
   .member.wide{grid-column:1/-1; background:var(--depth); display:flex; gap:12px 30px; align-items:center; align-content:center; flex-wrap:wrap}
   .member.wide .nm{font-size:1.3rem; margin:0}
   .member.wide .bio{flex:1; min-width:240px}
@@ -612,36 +619,48 @@
         <p class="bio">Entrepreneur, author, and relentless explorer of unconventional
           ideas. He doesn't believe — he needs to know. The expedition is his.</p>
       </div>
+      <div class="member lead">
+        <div class="idx">02 · Main character</div>
+        <div class="nm">Idris</div>
+        <div class="role">The Collector</div>
+        <p class="bio">A trader turned philosopher and explorer. Between two trade exits he does what
+          he does best with markets: he gathers data. Out-of-body experiences, past-life regressions,
+          channeled messages, military sensor footage, abduction reports. He files every one of them
+          by how strong its evidence is. His bet: when sources that never spoke to each other keep
+          describing the same thing, it stops being coincidence. He is in the Pyrenees to test that bet.</p>
+        <p class="bio files">His research: <a href="https://mimetra.com/blog/understanding-of-reality/intro/" target="_blank" rel="noopener"><i>Understanding of Reality</i> ↗</a>
+          &nbsp;·&nbsp; <a href="https://mimetra.com/blog/understanding-of-reality/chapter-12" target="_blank" rel="noopener">Ch. 12: Aliens, Highly Evolved Civilizations ↗</a></p>
+      </div>
       <div class="member">
-        <div class="idx">02</div>
+        <div class="idx">03</div>
         <div class="nm">Pete</div>
         <div class="role">The Witness</div>
         <p class="bio">A Canadian filmmaker documenting the journey, fighting to stay
           objective as the lens keeps catching things he can't explain.</p>
       </div>
       <div class="member">
-        <div class="idx">03</div>
+        <div class="idx">04</div>
         <div class="nm">Cedric</div>
         <div class="role">The Pattern</div>
         <p class="bio">A mathematical prodigy convinced the geometry hidden in ancient
           sites is a signature, not a coincidence — and that it's still broadcasting.</p>
       </div>
       <div class="member">
-        <div class="idx">04</div>
+        <div class="idx">05</div>
         <div class="nm">Karl</div>
         <div class="role">The Naturalist</div>
         <p class="bio">From Martinique, he reads bees, ecosystems and indigenous wisdom as
           one language — a way of interpreting reality the others have forgotten.</p>
       </div>
       <div class="member">
-        <div class="idx">05</div>
+        <div class="idx">06</div>
         <div class="nm">Sophie</div>
         <div class="role">The Frontier</div>
         <p class="bio">A former gaming executive turned shaman, certain that consciousness
           itself — not technology — is the true frontier, and the real gateway.</p>
       </div>
       <div class="member">
-        <div class="idx">06</div>
+        <div class="idx">07</div>
         <div class="nm">Alexa</div>
         <div class="role">The Agnostic</div>
         <p class="bio">Raised in the house where John Mack listened to abductees, she studies
@@ -649,7 +668,7 @@
           from people who swear they were taken. <a href="#dossiers" style="color:var(--signal)">Also in Dossier 02.</a></p>
       </div>
       <div class="member">
-        <div class="idx">07</div>
+        <div class="idx">08</div>
         <div class="nm">The Others</div>
         <div class="role">The Drift</div>
         <p class="bio">A Portuguese mystic, his German companion Mike, and the seekers who
@@ -657,8 +676,8 @@
       </div>
       <div class="member wide">
         <div class="nm">Ensemble note</div>
-        <p class="bio">Six points of view that can't all be right. Skeptic, believer,
-          scientist, naturalist, mystic, agnostic — the season's engine is the friction between
+        <p class="bio">Seven points of view that can't all be right. Skeptic, believer,
+          collector, scientist, naturalist, mystic, agnostic — the season's engine is the friction between
           ways of seeing, and what happens to a friendship when the mountain answers back.</p>
       </div>
     </div>
@@ -677,14 +696,14 @@
         <a href="#dossiers" style="color:var(--signal)">Dossier</a>.</p>
     </div>
     <div class="eps rv">
-      <div class="ep"><div class="day">DAY 01 · 08.12</div><div class="ttl">Ascent</div><div class="syn">The team gathers in a valley town. The rumour takes shape — and the first witness recants on camera.</div></div>
-      <div class="ep"><div class="day">DAY 02 · 08.13</div><div class="ttl">Folklore</div><div class="syn">Shepherds, monks and a smuggler's map. Stories that have no business agreeing begin to agree.</div></div>
-      <div class="ep"><div class="day">DAY 03 · 08.14</div><div class="ttl">The Monastery</div><div class="syn">A forgotten cloister, and a door that was bricked up for a reason no one will name.</div></div>
-      <div class="ep"><div class="day">DAY 04 · 08.15</div><div class="ttl">The Pattern</div><div class="syn">Cedric finds the same geometry across three megalithic sites that could never have been coordinated.</div></div>
-      <div class="ep"><div class="day">DAY 05 · 08.16</div><div class="ttl">The Ceremony</div><div class="syn">To see differently, the team agrees to perceive differently. Not everyone comes back the same.</div></div>
-      <div class="ep"><div class="day">DAY 06 · 08.17</div><div class="ttl">Coincidence</div><div class="syn">The lights return. The instruments disagree with the eyes. Pete stops narrating.</div></div>
-      <div class="ep"><div class="day">DAY 07 · 08.18</div><div class="ttl">The Watchers</div><div class="syn">Someone has been here before them. And someone, it turns out, does not want the base found.</div></div>
-      <div class="ep"><div class="day">DAY 08 · 08.19</div><div class="ttl">Contact</div><div class="syn">They reach the place the stories pointed to all along. The question they came with is no longer the question.</div></div>
+      <div class="ep"><div class="day">DAY 01 · 08.12</div><div class="ttl">Ascent</div><div class="syn">The team gathers in a valley town. The rumour takes shape, and the first witness recants on camera. Idris opens his binder on the table: start with what the Pentagon itself admits.<span class="file"><b>IDRIS FILE ·</b> USS Nimitz “Tic-Tac”, 2004 · FLIR footage declassified 2020 · AATIP → AARO</span></div></div>
+      <div class="ep"><div class="day">DAY 02 · 08.13</div><div class="ttl">Folklore</div><div class="syn">Shepherds, monks and a smuggler's map. Stories that have no business agreeing begin to agree. Idris calls it convergence. Alexa calls it the oldest trap in the book. They agree on one case, because John Mack interviewed its witnesses himself.<span class="file"><b>IDRIS FILE ·</b> Ariel School, Zimbabwe, 1994 · 60+ children · drawings that match</span></div></div>
+      <div class="ep"><div class="day">DAY 03 · 08.14</div><div class="ttl">The Monastery</div><div class="syn">A forgotten cloister, and a door that was bricked up for a reason no one will name. Above it, a carved figure with an elongated head. Idris knows a contactee who says this “father of your kind” has come back.<span class="file"><b>IDRIS FILE ·</b> Enki / Ea · Danaan’s 2021 contact account · “I have come to see my children setting themselves free”</span></div></div>
+      <div class="ep"><div class="day">DAY 04 · 08.15</div><div class="ttl">The Pattern</div><div class="syn">Cedric finds the same geometry across three megalithic sites that could never have been coordinated. Idris lays a soldier’s notebook beside it: a binary message that two witnesses, decades and an ocean apart, say they received.<span class="file"><b>IDRIS FILE ·</b> Rendlesham Forest, 1980 · Penniston’s binary notebook · “Disclose, Evolve”</span></div></div>
+      <div class="ep"><div class="day">DAY 05 · 08.16</div><div class="ttl">The Ceremony</div><div class="syn">To see differently, the team agrees to perceive differently. Idris tries what his sources describe: leaving the body. Not everyone comes back the same.<span class="file"><b>IDRIS FILE ·</b> OBE explorers who report visiting craft · Dolores Cannon’s regressions: souls who “volunteered” from elsewhere</span></div></div>
+      <div class="ep"><div class="day">DAY 06 · 08.17</div><div class="ttl">Coincidence</div><div class="syn">The lights return. The instruments disagree with the eyes, and three watches no longer agree with the camera clock. Idris has read this many times before. Pete stops narrating.<span class="file"><b>IDRIS FILE ·</b> Missing time · the pattern Idris links to Einstein’s time dilation (Hafele–Keating, 1971)</span></div></div>
+      <div class="ep"><div class="day">DAY 07 · 08.18</div><div class="ttl">The Watchers</div><div class="syn">Someone has been here before them. And someone, it turns out, does not want the base found. Idris’s most fragile file, which he files as testimony only, suddenly feels less fragile.<span class="file"><b>IDRIS FILE ·</b> Eisenhower, 1954 · “Valiant Thor” · MJ-12 · the non-interference principle</span></div></div>
+      <div class="ep"><div class="day">DAY 08 · 08.19</div><div class="ttl">Contact</div><div class="syn">They reach the place the stories pointed to all along. The question they came with, “are they dangerous?”, gives way to Idris’s: “are we interesting enough for them to bother?”<span class="file"><b>IDRIS FILE ·</b> Contact through consciousness, not radio telescopes · his plan if taken: “love first, but I’m not a pushover”</span></div></div>
     </div>
   </div>
 </section>
@@ -757,7 +776,7 @@
     <!-- episode -> dossier map -->
     <h3 class="sub-h rv">Season One — eight Dossiers</h3>
     <div class="dmap rv">
-      <div class="dcard"><div class="ep2">After Ep. 01 · Ascent</div><div class="dt">Disclosure, on the record</div><p>What governments have actually opened: France's GEIPAN files since 1977, the US hearings, the unsealed archives.</p><div class="g arc">Archive · no guest</div></div>
+      <div class="dcard"><div class="ep2">After Ep. 01 · Ascent</div><div class="dt">Disclosure, on the record</div><p>What governments have actually opened: the Nimitz, Gimbal and GoFast videos the Pentagon released in 2020, AATIP and AARO, the 2023 congressional hearing, and France's GEIPAN files since 1977. This is the solid end of Idris's evidence scale.</p><div class="g arc">Archive · no guest</div></div>
       <div class="dcard"><div class="ep2">After Ep. 02 · Folklore</div><div class="dt">The Harvard psychiatrist</div><p>John E. Mack and the experiencers he refused to dismiss — told by the woman who shared his life and research, and by her daughter, who grew up in the middle of it.</p><div class="g">Dominique Callimanopulos + Alexa Clay</div></div>
       <div class="dcard"><div class="ep2">After Ep. 03 · The Monastery</div><div class="dt">Stones that remember</div><p>Ancient sites and the visitor hypothesis — and what an archaeologist who worked at Karnak makes of it.</p><div class="g">Elena Danaan</div></div>
       <div class="dcard hl"><div class="ep2">After Ep. 04 · The Pattern</div><div class="dt">The Janus Universe</div><p>A twin universe of negative mass, and a French physicist who says it explains how they could get here.</p><div class="g">Jean-Pierre Petit + Thinkerview</div></div>
