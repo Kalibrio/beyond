@@ -180,8 +180,8 @@
   .cast-head{display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px; margin-bottom:54px}
   .cast-head h2{font-family:var(--serif); font-weight:500; font-size:clamp(2rem,5vw,3.2rem); line-height:1}
   .cast-head .note{color:var(--mist); font-size:.95rem; max-width:32ch}
-  .cast{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line)}
-  @media(max-width:860px){.cast{grid-template-columns:1fr 1fr}}
+  .cast{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; background:var(--line); border:1px solid var(--line)}
+  @media(max-width:860px){.cast{grid-template-columns:repeat(2,minmax(0,1fr))}}
   @media(max-width:560px){.cast{grid-template-columns:1fr}}
   .member{background:var(--void); padding:34px 30px 40px; position:relative; transition:background .4s}
   .member:hover{background:var(--depth)}
@@ -189,7 +189,10 @@
   .member .nm{font-family:var(--serif); font-size:1.85rem; font-weight:500; margin:18px 0 4px}
   .member .role{font-family:var(--mono); font-size:.64rem; letter-spacing:.18em; text-transform:uppercase; color:var(--signal); margin-bottom:18px}
   .member .bio{color:var(--mist); font-size:.96rem; line-height:1.6}
-  .member.wide{grid-column:1/-1; background:var(--depth); display:flex; gap:30px; align-items:baseline; flex-wrap:wrap}
+  .cast{grid-auto-flow:dense}
+  @media(min-width:561px) and (max-width:860px){.member:has(+ .member.wide){grid-column:1/-1}}
+  @media(min-width:861px){.member.wide{grid-column:span 2 !important}}
+  .member.wide{grid-column:1/-1; background:var(--depth); display:flex; gap:12px 30px; align-items:center; align-content:center; flex-wrap:wrap}
   .member.wide .nm{font-size:1.3rem; margin:0}
   .member.wide .bio{flex:1; min-width:240px}
 
@@ -317,9 +320,9 @@
   .short{position:relative; width:min(340px,86vw); aspect-ratio:9/16; margin:0 auto;
     border:1px solid var(--line); overflow:hidden; box-shadow:0 30px 80px rgba(0,0,0,.5)}
   .short iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
-  .wide{position:relative; width:min(820px,92vw); aspect-ratio:16/9; margin:52px auto 0;
+  .teaser .wide{position:relative; width:min(820px,92vw); aspect-ratio:16/9; margin:52px auto 0;
     border:1px solid var(--line); overflow:hidden; box-shadow:0 30px 80px rgba(0,0,0,.5)}
-  .wide iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+  .teaser .wide iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
   .reddit-embed{width:min(540px,92vw); margin:52px auto 0; text-align:left}
   .reddit-embed .reddit-embed-bq{margin:0}
 
@@ -639,6 +642,14 @@
       </div>
       <div class="member">
         <div class="idx">06</div>
+        <div class="nm">Alexa</div>
+        <div class="role">The Agnostic</div>
+        <p class="bio">Raised in the house where John Mack listened to abductees, she studies
+          misfits for a living and still refuses to pick a side. The only one who has sat across
+          from people who swear they were taken. <a href="#dossiers" style="color:var(--signal)">Also in Dossier 02.</a></p>
+      </div>
+      <div class="member">
+        <div class="idx">07</div>
         <div class="nm">The Others</div>
         <div class="role">The Drift</div>
         <p class="bio">A Portuguese mystic, his German companion Mike, and the seekers who
@@ -646,8 +657,8 @@
       </div>
       <div class="member wide">
         <div class="nm">Ensemble note</div>
-        <p class="bio">Five points of view that can't all be right. Skeptic, believer,
-          scientist, naturalist, mystic — the season's engine is the friction between
+        <p class="bio">Six points of view that can't all be right. Skeptic, believer,
+          scientist, naturalist, mystic, agnostic — the season's engine is the friction between
           ways of seeing, and what happens to a friendship when the mountain answers back.</p>
       </div>
     </div>
@@ -775,7 +786,7 @@
         <div class="meta"><span class="d">Dossier 02</span><a href="https://tonylutz.net/index.php/e-books/believer/the-believer" target="_blank" rel="noopener">The Believer ↗</a></div>
       </div>
       <div class="guest span2">
-        <div class="gi"><div class="av">AC</div><div><div class="gn">Alexa Clay</div><div class="gr">Witness · growing up with Mack</div></div></div>
+        <div class="gi"><div class="av">AC</div><div><div class="gn">Alexa Clay</div><div class="gr">Witness · also in the cast</div></div></div>
         <p>Dominique's daughter. A writer and researcher of misfit subcultures, she spent her 1990s childhood in the house her mother shared with John Mack, at the height of the abduction controversy and Harvard's inquiry into his work. Her Aeon essay looks back on it: scared of the aliens, a little jealous of the people who said they'd met them, and, in her words, <em>“entirely agnostic about the existence of aliens.”</em></p>
         <ol class="qs mini">
           <li>What did the word “experiencer” mean to you as a child at the kitchen table?</li>
