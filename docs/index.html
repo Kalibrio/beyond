@@ -273,6 +273,12 @@
   .guest .meta{margin-top:16px; display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; font-family:var(--mono); font-size:.58rem; letter-spacing:.14em; text-transform:uppercase}
   .guest .meta .d{color:var(--aurora)}
   .guest .meta a{color:var(--snow); border-bottom:1px solid var(--ember)}
+  .roster{grid-auto-flow:dense}
+  @media(min-width:861px){.guest.span2{grid-column:span 2}}
+  @media(min-width:561px) and (max-width:860px){.guest.span2:has(.qs){grid-column:1/-1}}
+  .qs.mini{margin:18px 0 4px}
+  .qs.mini li{font-size:1.02rem; padding:11px 0 11px 40px}
+  .qs.mini li::before{top:14px}
   .disclaim{margin-top:28px; font-family:var(--mono); font-size:.66rem; line-height:1.8; letter-spacing:.04em; color:var(--mist); max-width:90ch}
 
   /* ============ FUTURE SEASONS ============ */
@@ -741,7 +747,7 @@
     <h3 class="sub-h rv">Season One — eight Dossiers</h3>
     <div class="dmap rv">
       <div class="dcard"><div class="ep2">After Ep. 01 · Ascent</div><div class="dt">Disclosure, on the record</div><p>What governments have actually opened: France's GEIPAN files since 1977, the US hearings, the unsealed archives.</p><div class="g arc">Archive · no guest</div></div>
-      <div class="dcard"><div class="ep2">After Ep. 02 · Folklore</div><div class="dt">The Harvard psychiatrist</div><p>John E. Mack and the experiencers he refused to dismiss — the man behind the most serious academic study of contact.</p><div class="g">Dominique Callimanopulos</div></div>
+      <div class="dcard"><div class="ep2">After Ep. 02 · Folklore</div><div class="dt">The Harvard psychiatrist</div><p>John E. Mack and the experiencers he refused to dismiss — told by the woman who shared his life and research, and by her daughter, who grew up in the middle of it.</p><div class="g">Dominique Callimanopulos + Alexa Clay</div></div>
       <div class="dcard"><div class="ep2">After Ep. 03 · The Monastery</div><div class="dt">Stones that remember</div><p>Ancient sites and the visitor hypothesis — and what an archaeologist who worked at Karnak makes of it.</p><div class="g">Elena Danaan</div></div>
       <div class="dcard hl"><div class="ep2">After Ep. 04 · The Pattern</div><div class="dt">The Janus Universe</div><p>A twin universe of negative mass, and a French physicist who says it explains how they could get here.</p><div class="g">Jean-Pierre Petit + Thinkerview</div></div>
       <div class="dcard"><div class="ep2">After Ep. 05 · The Ceremony</div><div class="dt">Leaving the body</div><p>Out-of-body experience, intention and perception — consciousness as the frontier Sophie believes in.</p><div class="g">Miyoko Sano</div></div>
@@ -768,6 +774,16 @@
         <p>Granddaughter of a Greek shipping magnate and the late-life partner of Harvard psychiatrist John E. Mack, as told in Ralph Blumenthal's biography <em>The Believer</em> (2021). A rare first-hand view of the man and his conviction.</p>
         <div class="meta"><span class="d">Dossier 02</span><a href="https://tonylutz.net/index.php/e-books/believer/the-believer" target="_blank" rel="noopener">The Believer ↗</a></div>
       </div>
+      <div class="guest span2">
+        <div class="gi"><div class="av">AC</div><div><div class="gn">Alexa Clay</div><div class="gr">Witness · growing up with Mack</div></div></div>
+        <p>Dominique's daughter. A writer and researcher of misfit subcultures, she spent her 1990s childhood in the house her mother shared with John Mack, at the height of the abduction controversy and Harvard's inquiry into his work. Her Aeon essay looks back on it: scared of the aliens, a little jealous of the people who said they'd met them, and, in her words, <em>“entirely agnostic about the existence of aliens.”</em></p>
+        <ol class="qs mini">
+          <li>What did the word “experiencer” mean to you as a child at the kitchen table?</li>
+          <li>Did you ever want it to happen to you?</li>
+          <li>What did John teach you about listening to people the world had written off?</li>
+        </ol>
+        <div class="meta"><span class="d">Dossier 02 · tentative interview</span><a href="https://aeon.co/essays/wasn-t-i-special-enough-to-be-abducted-by-aliens" target="_blank" rel="noopener">Aeon · “Wasn’t I special enough to be abducted by aliens?” (2014) ↗</a></div>
+      </div>
       <div class="guest">
         <div class="gi"><div class="av">ED</div><div><div class="gn">Elena Danaan</div><div class="gr">Archaeology · contactee</div></div></div>
         <p>Born in Marseille; by her own account a former field archaeologist and Egyptologist who worked at Karnak with the CNRS. Best-selling author of <em>A Gift from the Stars</em> and a self-described contactee.</p>
@@ -778,7 +794,7 @@
         <p>From Tokyo, now living in Geneva. Japanese translator of Rhonda Byrne's <em>The Secret</em>, works on out-of-body experience, and organises Elena Danaan's events in Japan.</p>
         <div class="meta"><span class="d">Dossier 05</span><span class="d">Geneva · Tokyo</span></div>
       </div>
-      <div class="guest">
+      <div class="guest span2">
         <div class="gi"><div class="av">CE</div><div><div class="gn">Chris Essonne</div><div class="gr">Engineering · propulsion</div></div></div>
         <p>Centrale Paris engineer who revisits Tesla's ideas on vacuum energy and the ether to explain how anti-gravity craft might fly; writes and speaks on disclosure and secret space programmes.</p>
         <div class="meta"><span class="d">Dossier 06</span><a href="https://www.odla.fr/2025/05/17/technologies-galactiques-programmes-secrets-avec-chris-essonne/" target="_blank" rel="noopener">ODLA ↗</a></div>
