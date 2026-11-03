@@ -189,16 +189,11 @@
   .member .nm{font-family:var(--serif); font-size:1.85rem; font-weight:500; margin:18px 0 4px}
   .member .role{font-family:var(--mono); font-size:.64rem; letter-spacing:.18em; text-transform:uppercase; color:var(--signal); margin-bottom:18px}
   .member .bio{color:var(--mist); font-size:.96rem; line-height:1.6}
-  @media(min-width:561px){.member.lead{grid-column:span 2}}
-  @media(max-width:860px){.member.lead{grid-column:1/-1}}
-  @media(min-width:561px) and (max-width:860px){.member:has(+ .member.lead){grid-column:1/-1}}
-  .member.lead{background:linear-gradient(135deg, rgba(236,186,98,.07), transparent 60%), var(--void); box-shadow:inset 0 2px 0 var(--signal)}
-  .member.lead .idx{color:var(--signal)}
-  .member.lead .nm{font-size:2.3rem}
   .member .bio.files{margin-top:16px; font-family:var(--mono); font-size:.64rem; letter-spacing:.1em; text-transform:uppercase; line-height:2}
   .member .bio.files a{color:var(--snow); border-bottom:1px solid var(--ember)}
   .ep .file{display:block; margin-top:9px; font-family:var(--mono); font-size:.64rem; letter-spacing:.08em; line-height:1.7; color:var(--mist); opacity:.85}
   .ep .file b{color:var(--signal); font-weight:500; letter-spacing:.16em}
+  @media(min-width:861px){.member.wide{grid-column:span 1 !important; flex-direction:column; align-items:flex-start; justify-content:center; gap:12px}}
   .member.wide{grid-column:1/-1; background:var(--depth); display:flex; gap:12px 30px; align-items:center; align-content:center; flex-wrap:wrap}
   .member.wide .nm{font-size:1.3rem; margin:0}
   .member.wide .bio{flex:1; min-width:240px}
@@ -619,17 +614,15 @@
         <p class="bio">Entrepreneur, author, and relentless explorer of unconventional
           ideas. He doesn't believe — he needs to know. The expedition is his.</p>
       </div>
-      <div class="member lead">
-        <div class="idx">02 · Main character</div>
+      <div class="member">
+        <div class="idx">02</div>
         <div class="nm">Idris</div>
         <div class="role">The Collector</div>
-        <p class="bio">A trader turned philosopher and explorer. Between two trade exits he does what
-          he does best with markets: he gathers data. Out-of-body experiences, past-life regressions,
-          channeled messages, military sensor footage, abduction reports. He files every one of them
-          by how strong its evidence is. His bet: when sources that never spoke to each other keep
-          describing the same thing, it stops being coincidence. He is in the Pyrenees to test that bet.</p>
-        <p class="bio files">His research: <a href="https://mimetra.com/blog/understanding-of-reality/intro/" target="_blank" rel="noopener"><i>Understanding of Reality</i> ↗</a>
-          &nbsp;·&nbsp; <a href="https://mimetra.com/blog/understanding-of-reality/chapter-12" target="_blank" rel="noopener">Ch. 12: Aliens, Highly Evolved Civilizations ↗</a></p>
+        <p class="bio">A trader turned philosopher and explorer. Waiting for his next trade exit, he
+          collects evidence (OBEs, past-life regressions, channeling, aliens) and files it by
+          strength, betting that when unrelated sources agree, it stops being coincidence.</p>
+        <p class="bio files"><a href="https://mimetra.com/blog/understanding-of-reality/intro/" target="_blank" rel="noopener"><i>Understanding of Reality</i> ↗</a>
+          &nbsp;·&nbsp; <a href="https://mimetra.com/blog/understanding-of-reality/chapter-12" target="_blank" rel="noopener">Ch. 12 · Aliens ↗</a></p>
       </div>
       <div class="member">
         <div class="idx">03</div>
