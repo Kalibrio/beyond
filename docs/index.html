@@ -225,7 +225,8 @@
   .cover{position:relative; aspect-ratio:4/5; border:1px solid var(--line); overflow:hidden; box-shadow:0 30px 80px rgba(0,0,0,.55);
     background:radial-gradient(70% 55% at 50% 46%, rgba(236,186,98,.13), transparent 70%), linear-gradient(170deg,#0c1426,#070a12 70%)}
   @media(max-width:860px){.cover{max-width:380px; width:100%; margin:0 auto}}
-  .cover svg{position:absolute; inset:0; width:100%; height:100%}
+  .cover svg,.cover-img{position:absolute; inset:0; width:100%; height:100%}
+  .cover-img{object-fit:cover}
   .cover .ct{position:absolute; left:0; right:0; top:0; padding:22px 24px; display:flex; justify-content:space-between; font-family:var(--mono); font-size:.6rem; letter-spacing:.26em; text-transform:uppercase; color:var(--mist)}
   .cover .ct b{color:var(--signal); font-weight:500}
   .cover .cb{position:absolute; left:0; right:0; bottom:0; padding:60px 24px 24px; background:linear-gradient(to top, rgba(7,10,18,.96), rgba(7,10,18,.6) 60%, transparent)}
@@ -695,23 +696,7 @@
     <div class="feature">
       <div class="rv">
         <div class="cover">
-          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <!-- Janus: two mirrored sheets of the universe -->
-            <g fill="none" stroke-width="1">
-              <path d="M40 200 C120 150 280 150 360 200" stroke="#ECBA62" opacity=".55"/>
-              <path d="M60 180 C140 128 260 128 340 180" stroke="#ECBA62" opacity=".32"/>
-              <path d="M85 160 C155 110 245 110 315 160" stroke="#ECBA62" opacity=".18"/>
-              <path d="M40 240 C120 290 280 290 360 240" stroke="#5E7CB0" opacity=".6"/>
-              <path d="M60 260 C140 312 260 312 340 260" stroke="#5E7CB0" opacity=".36"/>
-              <path d="M85 280 C155 330 245 330 315 280" stroke="#5E7CB0" opacity=".2"/>
-            </g>
-            <line x1="20" y1="220" x2="380" y2="220" stroke="#2C3A5C" stroke-dasharray="2 6"/>
-            <circle cx="200" cy="176" r="34" fill="#ECBA62" opacity=".14"/>
-            <circle class="glow-core" cx="200" cy="176" r="4.5" fill="#F4D08A" style="filter:drop-shadow(0 0 8px rgba(236,186,98,.9))"/>
-            <circle cx="200" cy="264" r="34" fill="#5E7CB0" opacity=".12"/>
-            <circle cx="200" cy="264" r="4" fill="none" stroke="#8FA8D6" stroke-width="1.2"/>
-            <g fill="#AEB7CC" opacity=".5"><circle cx="70" cy="80" r="1"/><circle cx="330" cy="60" r="1.3"/><circle cx="300" cy="380" r="1"/><circle cx="90" cy="350" r="1.2"/></g>
-          </svg>
+          <img class="cover-img" src="img/dossier-04-janus-cover.jpg" alt="An elderly scientist on a Pyrenean ridge at night beneath a golden galaxy and its mirrored blue twin — the Janus universe" loading="lazy" />
           <div class="ct"><span><b>BEYOND</b> · Dossiers</span><span>Ep. 04</span></div>
           <div class="cb">
             <div class="no">DOSSIER Nº 04 · 2′30″</div>
@@ -719,7 +704,7 @@
             <div class="wi">with Jean-Pierre Petit</div>
           </div>
         </div>
-        <p class="cover-cap">Tentative cover · Dossier 04</p>
+        <p class="cover-cap">Tentative cover · Dossier 04 · AI-generated key art</p>
       </div>
 
       <div class="iv rv">
