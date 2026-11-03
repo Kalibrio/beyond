@@ -208,6 +208,70 @@
   @media(max-width:720px){.ep{grid-template-columns:62px 1fr; gap:6px 18px}
     .ep .syn{grid-column:1/-1; margin-top:8px}}
 
+
+  /* ============ DOSSIERS (end-of-episode documentaries) ============ */
+  .dossiers{background:var(--void); border-top:1px solid var(--line)}
+  .dos-head{max-width:760px; margin-bottom:58px}
+  .dos-head h2{font-family:var(--serif); font-weight:500; font-size:clamp(2rem,5vw,3.2rem); line-height:1.02; margin:16px 0 18px}
+  .dos-head p{color:var(--mist); margin-bottom:14px}
+  .dos-head p strong{color:var(--snow); font-weight:500}
+  .rules{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-bottom:80px}
+  @media(max-width:760px){.rules{grid-template-columns:1fr}}
+  .rule-c{background:var(--depth); padding:24px 22px}
+  .rule-c .k{font-family:var(--mono); font-size:.62rem; letter-spacing:.2em; text-transform:uppercase; color:var(--signal); margin-bottom:8px}
+  .rule-c p{color:var(--mist); font-size:.93rem; line-height:1.55}
+  .feature{display:grid; grid-template-columns:minmax(0,380px) minmax(0,1fr); gap:56px; align-items:start; margin-bottom:90px}
+  @media(max-width:860px){.feature{grid-template-columns:minmax(0,1fr); gap:40px}}
+  .cover{position:relative; aspect-ratio:4/5; border:1px solid var(--line); overflow:hidden; box-shadow:0 30px 80px rgba(0,0,0,.55);
+    background:radial-gradient(70% 55% at 50% 46%, rgba(236,186,98,.13), transparent 70%), linear-gradient(170deg,#0c1426,#070a12 70%)}
+  @media(max-width:860px){.cover{max-width:380px; width:100%; margin:0 auto}}
+  .cover svg{position:absolute; inset:0; width:100%; height:100%}
+  .cover .ct{position:absolute; left:0; right:0; top:0; padding:22px 24px; display:flex; justify-content:space-between; font-family:var(--mono); font-size:.6rem; letter-spacing:.26em; text-transform:uppercase; color:var(--mist)}
+  .cover .ct b{color:var(--signal); font-weight:500}
+  .cover .cb{position:absolute; left:0; right:0; bottom:0; padding:60px 24px 24px; background:linear-gradient(to top, rgba(7,10,18,.96), rgba(7,10,18,.6) 60%, transparent)}
+  .cover .no{font-family:var(--mono); font-size:.62rem; letter-spacing:.24em; color:var(--aurora)}
+  .cover .tt{font-family:var(--serif); font-size:2.3rem; line-height:1; font-weight:500; margin:8px 0 6px}
+  .cover .tt em{color:var(--signal); font-weight:400}
+  .cover .wi{font-family:var(--serif); font-style:italic; font-size:1.1rem; color:var(--mist)}
+  .cover-cap{font-family:var(--mono); font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; color:var(--aurora); margin-top:14px; text-align:center}
+  .iv .eyebrow{display:block; margin-bottom:14px}
+  .iv h3{font-family:var(--serif); font-weight:500; font-size:clamp(1.8rem,4vw,2.5rem); line-height:1.05}
+  .iv .cred{font-family:var(--mono); font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:var(--signal); margin:10px 0 18px}
+  .iv > p{color:var(--mist); margin-bottom:16px; max-width:58ch}
+  .qs{list-style:none; counter-reset:q; margin:26px 0 30px; border-top:1px solid var(--line)}
+  .qs li{counter-increment:q; padding:16px 0 16px 46px; border-bottom:1px solid var(--line); position:relative; font-family:var(--serif); font-size:1.18rem; line-height:1.35; color:var(--snow)}
+  .qs li::before{content:"Q" counter(q); position:absolute; left:0; top:20px; font-family:var(--mono); font-size:.62rem; letter-spacing:.14em; color:var(--signal)}
+  .docvid{position:relative; aspect-ratio:16/9; border:1px solid var(--line); overflow:hidden; background:#000}
+  .docvid iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+  .vidcap{font-family:var(--mono); font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--mist); margin-top:10px; line-height:1.7}
+  .vidcap a{color:var(--signal)}
+  .sub-h{font-family:var(--serif); font-weight:500; font-size:clamp(1.6rem,3.6vw,2.2rem); margin:0 0 26px}
+  .dmap{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:90px}
+  @media(max-width:960px){.dmap{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.dmap{grid-template-columns:1fr}}
+  .dcard{border:1px solid var(--line); padding:22px 20px 24px; background:var(--depth); transition:border-color .4s, transform .4s; display:flex; flex-direction:column}
+  .dcard:hover{border-color:var(--ember); transform:translateY(-3px)}
+  .dcard.hl{border-color:var(--ember)}
+  .dcard .ep2{font-family:var(--mono); font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; color:var(--aurora)}
+  .dcard .dt{font-family:var(--serif); font-size:1.4rem; font-weight:500; line-height:1.1; margin:10px 0 10px}
+  .dcard p{color:var(--mist); font-size:.88rem; line-height:1.55; flex:1}
+  .dcard .g{margin-top:14px; font-family:var(--mono); font-size:.6rem; letter-spacing:.14em; text-transform:uppercase; color:var(--signal)}
+  .dcard .g.arc{color:var(--mist)}
+  .roster{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line)}
+  @media(max-width:860px){.roster{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.roster{grid-template-columns:1fr}}
+  .guest{background:var(--void); padding:30px 26px 32px; transition:background .4s; display:flex; flex-direction:column}
+  .guest:hover{background:var(--depth)}
+  .guest .gi{display:flex; align-items:center; gap:14px; margin-bottom:16px}
+  .guest .av{width:46px; height:46px; border-radius:50%; border:1px solid var(--ember); display:grid; place-items:center; font-family:var(--serif); font-size:1.15rem; color:var(--signal); flex:none}
+  .guest .gn{font-family:var(--serif); font-size:1.45rem; font-weight:500; line-height:1.1}
+  .guest .gr{font-family:var(--mono); font-size:.58rem; letter-spacing:.16em; text-transform:uppercase; color:var(--signal); margin-top:4px}
+  .guest p{color:var(--mist); font-size:.92rem; line-height:1.58; flex:1}
+  .guest .meta{margin-top:16px; display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; font-family:var(--mono); font-size:.58rem; letter-spacing:.14em; text-transform:uppercase}
+  .guest .meta .d{color:var(--aurora)}
+  .guest .meta a{color:var(--snow); border-bottom:1px solid var(--ember)}
+  .disclaim{margin-top:28px; font-family:var(--mono); font-size:.66rem; line-height:1.8; letter-spacing:.04em; color:var(--mist); max-width:90ch}
+
   /* ============ FUTURE SEASONS ============ */
   .future-head{max-width:640px; margin-bottom:56px}
   .future-head h2{font-family:var(--serif); font-weight:500; font-size:clamp(2rem,5vw,3.2rem); line-height:1; margin:16px 0 16px}
@@ -281,6 +345,7 @@
     <a href="#look">The Look</a>
     <a href="#cast">Expedition</a>
     <a href="#season">Season One</a>
+    <a href="#dossiers">Dossiers</a>
     <a href="#future">Beyond S1</a>
   </div>
 </nav>
@@ -337,7 +402,7 @@
 <!-- ============ FORMAT STRIP ============ -->
 <div class="strip">
   <div class="wrap">
-    <div class="stat"><div class="k">Format</div><div class="v">8 × 50′<small>Episodes</small></div></div>
+    <div class="stat"><div class="k">Format</div><div class="v">8 × 50′<small>Episodes + 8 Dossiers (1–3′)</small></div></div>
     <div class="stat"><div class="k">Genre</div><div class="v">Docu-fiction<small>Mystery · adventure · spiritual quest</small></div></div>
     <div class="stat"><div class="k">Location</div><div class="v">The Pyrenees<small>France &amp; Spain</small></div></div>
     <div class="stat"><div class="k">Timeline</div><div class="v">One week<small>August 12–19</small></div></div>
@@ -588,7 +653,8 @@
       <h2>The Pyrenees</h2>
       <p>One week, told as eight episodes — August 12 to 19. The clock is the structure:
         each day they climb higher, the evidence gets stranger, and the team gets closer
-        to something none of them is ready for.</p>
+        to something none of them is ready for. Every episode closes on a short, real-world
+        <a href="#dossiers" style="color:var(--signal)">Dossier</a>.</p>
     </div>
     <div class="eps rv">
       <div class="ep"><div class="day">DAY 01 · 08.12</div><div class="ttl">Ascent</div><div class="syn">The team gathers in a valley town. The rumour takes shape — and the first witness recants on camera.</div></div>
@@ -600,6 +666,136 @@
       <div class="ep"><div class="day">DAY 07 · 08.18</div><div class="ttl">The Watchers</div><div class="syn">Someone has been here before them. And someone, it turns out, does not want the base found.</div></div>
       <div class="ep"><div class="day">DAY 08 · 08.19</div><div class="ttl">Contact</div><div class="syn">They reach the place the stories pointed to all along. The question they came with is no longer the question.</div></div>
     </div>
+  </div>
+</section>
+
+<!-- ============ DOSSIERS — end-of-episode documentaries ============ -->
+<section class="dossiers" id="dossiers">
+  <div class="wrap">
+    <div class="dos-head rv">
+      <span class="eyebrow">The Dossiers · after every episode</span>
+      <h2>Then the fiction stops.</h2>
+      <p>Borrowed from a classic of French TV: <em>Les Mystérieuses Cités d'Or</em> closed every
+        animated episode with a short live-action documentary on the real Inca, Maya and Olmec
+        history behind the adventure. <strong>Beyond does the same with Non-Human Intelligence.</strong></p>
+      <p>When the credits roll, the drama cuts to a 1–3 minute <strong>Dossier</strong>: one real
+        idea from the episode — a case, a theory, an archive, a physics question — told straight,
+        and often in the words of the person who has spent a life on it.</p>
+    </div>
+
+    <div class="rules rv">
+      <div class="rule-c"><div class="k">01 · Real, not fiction</div><p>Real people, real archives, real places. No actors, no reconstruction passed off as footage.</p></div>
+      <div class="rule-c"><div class="k">02 · One idea, 1–3 min</div><p>A single question per episode. Short enough to stay for, sharp enough to share as a standalone clip.</p></div>
+      <div class="rule-c"><div class="k">03 · Attributed, not endorsed</div><p>Every claim is put in the speaker's mouth and labelled as testimony, theory or record. The viewer decides.</p></div>
+    </div>
+
+    <!-- featured: tentative cover + interview -->
+    <div class="feature">
+      <div class="rv">
+        <div class="cover">
+          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <!-- Janus: two mirrored sheets of the universe -->
+            <g fill="none" stroke-width="1">
+              <path d="M40 200 C120 150 280 150 360 200" stroke="#ECBA62" opacity=".55"/>
+              <path d="M60 180 C140 128 260 128 340 180" stroke="#ECBA62" opacity=".32"/>
+              <path d="M85 160 C155 110 245 110 315 160" stroke="#ECBA62" opacity=".18"/>
+              <path d="M40 240 C120 290 280 290 360 240" stroke="#5E7CB0" opacity=".6"/>
+              <path d="M60 260 C140 312 260 312 340 260" stroke="#5E7CB0" opacity=".36"/>
+              <path d="M85 280 C155 330 245 330 315 280" stroke="#5E7CB0" opacity=".2"/>
+            </g>
+            <line x1="20" y1="220" x2="380" y2="220" stroke="#2C3A5C" stroke-dasharray="2 6"/>
+            <circle cx="200" cy="176" r="34" fill="#ECBA62" opacity=".14"/>
+            <circle class="glow-core" cx="200" cy="176" r="4.5" fill="#F4D08A" style="filter:drop-shadow(0 0 8px rgba(236,186,98,.9))"/>
+            <circle cx="200" cy="264" r="34" fill="#5E7CB0" opacity=".12"/>
+            <circle cx="200" cy="264" r="4" fill="none" stroke="#8FA8D6" stroke-width="1.2"/>
+            <g fill="#AEB7CC" opacity=".5"><circle cx="70" cy="80" r="1"/><circle cx="330" cy="60" r="1.3"/><circle cx="300" cy="380" r="1"/><circle cx="90" cy="350" r="1.2"/></g>
+          </svg>
+          <div class="ct"><span><b>BEYOND</b> · Dossiers</span><span>Ep. 04</span></div>
+          <div class="cb">
+            <div class="no">DOSSIER Nº 04 · 2′40″</div>
+            <div class="tt">The <em>Janus</em> Universe</div>
+            <div class="wi">with Jean-Pierre Petit</div>
+          </div>
+        </div>
+        <p class="cover-cap">Tentative cover · Dossier 04</p>
+      </div>
+
+      <div class="iv rv">
+        <span class="eyebrow dim">// Tentative interview</span>
+        <h3>Jean-Pierre Petit</h3>
+        <div class="cred">Astrophysicist · former CNRS research director · Aix-en-Provence</div>
+        <p>A specialist in magnetohydrodynamics who turned to theoretical cosmology, Petit is the
+          author of the <strong style="color:var(--snow);font-weight:500">Janus model</strong> — a universe of two
+          mirrored sheets, one of positive and one of negative mass — and has argued for decades
+          that the UFO question deserves real physics. It is the theory Cedric is half-reaching for
+          in <em>The Pattern</em>; the Dossier lets its author speak for himself.</p>
+        <ol class="qs">
+          <li>You spent your career on magnetohydrodynamics at the CNRS. When did the UFO question stop being a curiosity and become physics for you?</li>
+          <li>Explain Janus as you would to a twelve-year-old: what is negative mass, and where is it hiding?</li>
+          <li>If Janus is right, does it change what interstellar travel would require?</li>
+          <li>Mainstream cosmology has largely ignored the model. Which observation could prove you wrong?</li>
+          <li>On the day of disclosure, what do you want people to understand first?</li>
+        </ol>
+        <div class="docvid">
+          <iframe src="https://www.youtube.com/embed/EzL1_Kod9-w?rel=0&modestbranding=1&playsinline=1"
+            title="Thinkerview — OVNI, Astrophysique : Jean-Pierre Petit sans filtres" loading="lazy"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p class="vidcap">Source extract · Thinkerview, “OVNI, Astrophysique : Jean-Pierre Petit sans filtres”, 16 Apr 2026 ·
+          <a href="https://www.thinkerview.com/ovni-astrophysique-jean-pierre-petit-sans-filtres/" target="_blank" rel="noopener">thinkerview.com</a>
+          · CC BY-NC-SA 4.0 · excerpt timecode to be selected</p>
+      </div>
+    </div>
+
+    <!-- episode -> dossier map -->
+    <h3 class="sub-h rv">Season One — eight Dossiers</h3>
+    <div class="dmap rv">
+      <div class="dcard"><div class="ep2">After Ep. 01 · Ascent</div><div class="dt">Disclosure, on the record</div><p>What governments have actually opened: France's GEIPAN files since 1977, the US hearings, the unsealed archives.</p><div class="g arc">Archive · no guest</div></div>
+      <div class="dcard"><div class="ep2">After Ep. 02 · Folklore</div><div class="dt">The Harvard psychiatrist</div><p>John E. Mack and the experiencers he refused to dismiss — the man behind the most serious academic study of contact.</p><div class="g">Dominique Callimanopulos</div></div>
+      <div class="dcard"><div class="ep2">After Ep. 03 · The Monastery</div><div class="dt">Stones that remember</div><p>Ancient sites and the visitor hypothesis — and what an archaeologist who worked at Karnak makes of it.</p><div class="g">Elena Danaan</div></div>
+      <div class="dcard hl"><div class="ep2">After Ep. 04 · The Pattern</div><div class="dt">The Janus Universe</div><p>A twin universe of negative mass, and a French physicist who says it explains how they could get here.</p><div class="g">Jean-Pierre Petit + Thinkerview</div></div>
+      <div class="dcard"><div class="ep2">After Ep. 05 · The Ceremony</div><div class="dt">Leaving the body</div><p>Out-of-body experience, intention and perception — consciousness as the frontier Sophie believes in.</p><div class="g">Miyoko Sano</div></div>
+      <div class="dcard"><div class="ep2">After Ep. 06 · Coincidence</div><div class="dt">How would they fly?</div><p>Lights that stop dead and turn at right angles. An engineer's case for field propulsion and the ether.</p><div class="g">Chris Essonne</div></div>
+      <div class="dcard"><div class="ep2">After Ep. 07 · The Watchers</div><div class="dt">What the state knows</div><p>Secrecy, intelligence services and the UFO file, from a man who ran intelligence for France's DGSE.</p><div class="g">Alain Juillet</div></div>
+      <div class="dcard"><div class="ep2">After Ep. 08 · Contact</div><div class="dt">If it happened tomorrow</div><p>One question to every voice of the season: what would contact change — for science, states, and us?</p><div class="g arc">Ensemble · all guests</div></div>
+    </div>
+
+    <!-- interview roster -->
+    <h3 class="sub-h rv">The voices</h3>
+    <div class="roster rv">
+      <div class="guest">
+        <div class="gi"><div class="av">JP</div><div><div class="gn">Jean-Pierre Petit</div><div class="gr">Physics · Janus model</div></div></div>
+        <p>French astrophysicist and former CNRS research director, based near Aix-en-Provence. Plasma and MHD specialist, author of the Janus cosmological model and of several books on the UFO question.</p>
+        <div class="meta"><span class="d">Dossier 04</span><a href="https://www.thinkerview.com/ovni-astrophysique-jean-pierre-petit-sans-filtres/" target="_blank" rel="noopener">Thinkerview ↗</a></div>
+      </div>
+      <div class="guest">
+        <div class="gi"><div class="av">AJ</div><div><div class="gn">Alain Juillet</div><div class="gr">Intelligence · the state</div></div></div>
+        <p>Former director of intelligence at the DGSE, France's foreign intelligence service, and later the Prime Minister's high representative for economic intelligence. Has spoken openly about UFOs and state secrecy.</p>
+        <div class="meta"><span class="d">Dossier 07</span><a href="https://www.youtube.com/watch?v=zVvzB_c29Bc&t=2029s" target="_blank" rel="noopener">Open Box TV ↗</a></div>
+      </div>
+      <div class="guest">
+        <div class="gi"><div class="av">DC</div><div><div class="gn">Dominique Callimanopulos</div><div class="gr">Witness · John Mack</div></div></div>
+        <p>Granddaughter of a Greek shipping magnate and the late-life partner of Harvard psychiatrist John E. Mack, as told in Ralph Blumenthal's biography <em>The Believer</em> (2021). A rare first-hand view of the man and his conviction.</p>
+        <div class="meta"><span class="d">Dossier 02</span><a href="https://tonylutz.net/index.php/e-books/believer/the-believer" target="_blank" rel="noopener">The Believer ↗</a></div>
+      </div>
+      <div class="guest">
+        <div class="gi"><div class="av">ED</div><div><div class="gn">Elena Danaan</div><div class="gr">Archaeology · contactee</div></div></div>
+        <p>Born in Marseille; by her own account a former field archaeologist and Egyptologist who worked at Karnak with the CNRS. Best-selling author of <em>A Gift from the Stars</em> and a self-described contactee.</p>
+        <div class="meta"><span class="d">Dossier 03</span><a href="https://www.elenadanaan.org/about" target="_blank" rel="noopener">elenadanaan.org ↗</a></div>
+      </div>
+      <div class="guest">
+        <div class="gi"><div class="av">MS</div><div><div class="gn">Miyoko Sano</div><div class="gr">Consciousness · OBE</div></div></div>
+        <p>From Tokyo, now living in Geneva. Japanese translator of Rhonda Byrne's <em>The Secret</em>, works on out-of-body experience, and organises Elena Danaan's events in Japan.</p>
+        <div class="meta"><span class="d">Dossier 05</span><span class="d">Geneva · Tokyo</span></div>
+      </div>
+      <div class="guest">
+        <div class="gi"><div class="av">CE</div><div><div class="gn">Chris Essonne</div><div class="gr">Engineering · propulsion</div></div></div>
+        <p>Centrale Paris engineer who revisits Tesla's ideas on vacuum energy and the ether to explain how anti-gravity craft might fly; writes and speaks on disclosure and secret space programmes.</p>
+        <div class="meta"><span class="d">Dossier 06</span><a href="https://www.odla.fr/2025/05/17/technologies-galactiques-programmes-secrets-avec-chris-essonne/" target="_blank" rel="noopener">ODLA ↗</a></div>
+      </div>
+    </div>
+    <p class="disclaim rv">Tentative line-up · interviews not yet confirmed. Dossiers present testimony and theory as such —
+      each claim attributed to its speaker, with the mainstream view given alongside where one exists.</p>
   </div>
 </section>
 
